@@ -1,0 +1,38 @@
+{
+  "name": "discord-bot-tofu",
+  "version": "1.0.0",
+  "main": "dist/app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mosakung/discord-bot-tofu.git"
+  },
+  "author": "mosakung <mosakung@live.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@discordjs/rest": "^0.3.0",
+    "discord-api-types": "^0.29.0",
+    "discord.js": "^13.6.0",
+    "dotenv": "^16.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21",
+    "@typescript-eslint/eslint-plugin": "^5.15.0",
+    "@typescript-eslint/parser": "^5.15.0",
+    "eslint": "^8.11.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "2.25.2",
+    "eslint-plugin-typescript": "^0.14.0",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.6.0",
+    "ts-node": "^10.7.0",
+    "tslib": "^2.3.1",
+    "typescript": "^4.6.2"
+  },
+  "scripts": {
+    "build": "tsc",
+    "pre-start": "yarn run build",
+    "start": "set NODE_ENV=bot&& node ./dist/app.js",
+    "nodemon": "set NODE_ENV=bot&& nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
